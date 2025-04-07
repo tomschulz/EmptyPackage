@@ -9,8 +9,13 @@ class EmptyPackageBuddyFriendGuy {
     let friend = "Guy"
     let guy = "Buddy"
     
-    func sayHello() -> String {
-        return "Hello \(buddy). Want to be me \(guy), \(friend)?"
+    init() {
+        DDLog.add(DDOSLogger.sharedInstance) // Required: sets up logging to the system console
+       
+    }
+    
+    func sayHello() {
+        DDLogInfo("Hello \(buddy). Want to be my \(guy), \(friend)?")
     }
     
 }
